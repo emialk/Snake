@@ -1,7 +1,7 @@
 # Snake
-A C++ snake clone implemented with SDL2
+A C++ snake clone implemented with [raylib](https://www.raylib.com/)
 
 ### Build
 Use `scripts/build.py` when building this project.
 
-`./scripts/build.py -a` will run all configured tools: `clang-format`, `CMake`, `clang-tidy` and then build the project.
+`./scripts/build.py -cb && ./build/snake` will build the project and run the executable.
