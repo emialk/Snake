@@ -15,7 +15,7 @@ add_subdirectory(src)
 # Create main program target
 add_executable(snake main.cpp)
 target_include_directories(snake PRIVATE .)
-target_link_libraries(snake PRIVATE raylib spdlog snake_src)
+target_link_libraries(snake PRIVATE raylib snake_src)
 target_compile_options(snake PRIVATE ${DEFAULT_WARNINGS})
 # Run clang-tidy when building the main target
 set_target_properties(snake PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}")
