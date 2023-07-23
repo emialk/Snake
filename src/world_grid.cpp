@@ -52,10 +52,14 @@ namespace world_grid {
       snake.grow();
       food.x = rand() % glob::gridCntHorz;
       food.y = rand() % glob::gridCntVert;
+      TraceLog(LOG_INFO, "Collision with food at: (%d, %d)",
+	       static_cast<int>(snakePos.y), static_cast<int>(snakePos.x));
     }
 
     if(at(snake.getPos()) == glob::ObjCode::SNAKE_TAIL){
-       // game over
+      // Game over
+      snake.setDir(glob::Direction::NONE);
+      snake.clearTail();
       TraceLog(LOG_INFO, "Collision with tail at: (%d, %d)",
 	       static_cast<int>(snakePos.y), static_cast<int>(snakePos.x));
     }

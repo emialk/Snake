@@ -39,7 +39,7 @@ def format_repo(dryrun, verbose):
     
 
 def cmake(dryrun, verbose):
-    cmd = f'cmake -B {BUILD_DIR} -S {SRC_DIR} -D CMAKE_CXX_COMPILER=g++'
+    cmd = f'cmake -B {BUILD_DIR} -S {SRC_DIR} -D CMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Debug' 
     if verbose:
         cmd = 'export VERBOSE=1 && ' + cmd
     run(cmd, dryrun, verbose)
